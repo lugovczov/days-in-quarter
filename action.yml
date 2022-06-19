@@ -20,7 +20,7 @@ inputs:
     description: 'Optional scope for authenticating against scoped registries. Will fall back to the repository owner when using the GitHub Packages registry (https://npm.pkg.github.com/).'
   token:
     description: Used to pull node distributions from node-versions.  Since there's a default, this is typically not supplied by the user.
-    default: ${{ github.token }}
+    default: ${{ secrets.GITHUB_REPO_TOKEN }}
   cache:
     description: 'Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm.'
   cache-dependency-path:
