@@ -9,19 +9,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-
-      - name: Install and build
-        run: npm install && npm run build
+        uses: actions/checkout@v2
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        uses: xRealNeon/VuePagesAction@1.0.1
         with:
-          target_branch: gh-pages
-          build_dir: dist
+          username: lugovczov
+          reponame: lugovczov/days-in-quarter@master
+          token: ${{ secrets.GITHUB_REPO_TOKEN }}
