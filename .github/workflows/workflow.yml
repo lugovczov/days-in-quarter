@@ -18,4 +18,4 @@ jobs:
         with:
           username: lugovczov
           reponame: days-in-quarter
-          token: ${{ secrets.GITHUB_REPO_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_REPO_TOKEN }}
