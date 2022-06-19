@@ -17,7 +17,7 @@ jobs:
       - run: npm install
       - run: npm run build
       - name: Deploy
-        uses: lugovczov/days-in-quarter@master/.github/workflows/continuous-integration-workflow.yml
+        uses: ./.github/workflows/action.yml
         with:
           target_branch: gh-pages
           build_dir: dist
