@@ -16,9 +16,8 @@ jobs:
           node-version: "14.x"
       - run: npm install
       - run: npm run build
-      - run: npm test
       - name: Deploy
-        uses: crazy-max/ghaction-github-pages@v1
+        uses: lugovczov/days-in-quarter@master
         with:
           target_branch: gh-pages
           build_dir: dist
